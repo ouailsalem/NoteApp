@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/4.4.1/sketchy/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>My Notes</title>
+    <style>
+        body {
+            margin: 0;
+            box-sizing: border-box;
+            transition: all 1s ease-in-out;
+        }
+
+        .container {
+            margin-top: 20px;
+            border: 2px solid black;
+            width: 600px;
+            padding: 5px;
+        }
+
+        h1 {
+            margin-top: 10px;
+            text-align: center;
+            padding-top: 10px;
+            font-size: 50px;
+            color: #ffc107;
+            font-weight: 800;
+        }
+
+        #clearBtn {
+            display: none;
+        }
+
+        #user-note,
+        #clearBtn {
+            font-size: 30px;
+        }
+
+        .single-note {
+            padding: 10px;
+            display: flex;
+            justify-content: space-between;
+            justify-items: center;
+            align-items: center;
+            border-bottom: 1px dashed black;
+            cursor: pointer;
+        }
+
+        .single-note:nth-last-child(1) {
+            border-bottom: 0px;
+        }
+
+
+        .myparagraph {
+            font-size: 1.5em;
+            margin-bottom: 0 !important;
+        }
+
+        .empty {
+            padding: 10px;
+            font-size: 25px;
+            color: gray;
+            text-align: center;
+            margin-top: 20px;
+
+        }
+
+        #plsAddNote {
+            margin-top: 10px;
+            font-size: 18px;
+            text-align: center;
+            justify-content: center;
+            width: 300px;
+            height: 29px;
+            justify-items: center;
+            margin-bottom: 0 !important;
+            display: none;
+
+        }
+
+        #user-note:focus {
+            background-color: #ffc107;
+        }
+
+        .fa-laugh-wink:before {
+            color: #ffc107;
+        }
+
+        .line {
+            text-decoration: line-through;
+            color: lightslategrey;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div class="container jumbotron">
+        <div class="col-sm">
+            <div class="col-sm">
+                <h1 id="mytitle">My Notes</h1>
+            </div>
+            <div class="form-group col">
+                <label for="note"></label>
+                <input type="text" name="note" id="user-note" class="form-control" maxlength="55"
+                    placeholder="write ur note..">
+            </div>
+        </div>
+    </div>
+    <center>
+        <div id="plsAddNote" class="bg-warning col-lg">
+            <p>Write something..</p>
+        </div>
+    </center>
+    <div id="notes-list" class="container jumbotron"></div>
+    <center>
+        <div>
+            <input type="button" name="clear" id="clearBtn" class="btn btn-primary btn-lg" maxlength="55"
+                value="Clear All">
+        </div>
+    </center>
+
+    <script></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <script src="app.js"></script>
+
+
+</body>
+
+</html>
